@@ -1,63 +1,128 @@
 <template>
-<div class="container">
-  <div style="text-align:center" class="container">
-    <p style="color:orange">Swing by for a cup of coffee, or leave us a message:</p>
+  <v-app>
+    <v-main>
+      <v-banner>
+        <h5 style="color:#E021A0; font-style:italic;font-family:Cursive,garamond,serif;">Staforce Services Pvt Ltd</h5>
+      </v-banner>
+      <v-container>
+
+
+  <MDBTabs v-model="activeTabId1">
+    <!-- Tabs navs -->
+    <MDBTabNav pills tabsClasses="mb-3">
+      <MDBTabItem tabId="ex1-1" href="ex1-1">Tab #1</MDBTabItem>
+      <MDBTabItem tabId="ex1-2" href="ex1-2">Tab #2</MDBTabItem>
+      <MDBTabItem tabId="ex1-3" href="ex1-3">Tab #3</MDBTabItem>
+    </MDBTabNav>
+    <!-- Tabs navs -->
+    <!-- Tabs content -->
+    <MDBTabContent>
+      <MDBTabPane tabId="ex1-1">
+          <MDBRow style="color: #985DF1;background-color: #F1E5E7;">
+    <MDBCol col="9"> <h1>Address</h1></MDBCol>
+    <MDBCol col="4">
+      <p>Plot no 430/42</p><br />
+      <p>Laxmi Vihar, Burari</p>
+      <br /><p>Delhi</p>
+    </MDBCol>
+    <MDBCol col="6">
+      <h2><i class="fas fa-envelope-open"></i></h2>
+      <br /><p>support@staforce.in</p>
+      <h2><i class="fas fa-phone"></i></h2>
+      <br /><p>9953850970</p>
+    </MDBCol>
+  </MDBRow>
+      </MDBTabPane>
+      <MDBTabPane tabId="ex1-2">
+        <v-banner>
+        <h5 style="color:blue">Call or leave us a message:</h5>
+      </v-banner>
+
+      
+ <form @submit.prevent="sendEmail">
+  <div style="background-color: #F3F4FF;">
+        <MDBInput label="Name" v-model="name" />
+  <MDBInput label="Email" v-model="email" type="email" />
+  <MDBInput label="Phone number" v-model="phone" type="tel" />
+  <MDBTextarea label="Message" rows="4" v-model="message" />
   </div>
-
-  <div class="row">
-    
-    <div class="column">
-      <h1>Address</h1>
-      <p>Old Bowenpally,</p>
-      <p>Hyderabad</p>
-      </div>
-  <div class="column">
-<h2><i class="fas fa-envelope-open"></i>Email</h2>
-<p>support@staforce.in</p>
-</div>
-<div class="column">
-
-      <form @submit.prevent="sendEmail">
-        <label for="fname">Name</label>
-        <input type="text" id="fname" name="name" v-model="name" placeholder="Your name..">
-        <label for="lname">Phone</label>
-        <input type="text" id="phone" name="phone" v-model="phone" placeholder="Your phone no..">
-        <label for="gender">Gender</label>
-        <select id="gender" name="gender"  v-model="gender">
-          <option value="male">Male</option>
-          <option value="female">Female</option>
-        </select>
-        <label for="message">Message</label>
-        <textarea id="message" name="message" placeholder="Write something.." style="height:170px"  v-model="message"></textarea>
-        <input type="submit" value="Submit">
+       <MDBBtn color="primary" >
+         <input type="submit" value="Submit">
+       </MDBBtn> 
       </form>
+      </MDBTabPane>
+      <MDBTabPane tabId="ex1-3">Content #3</MDBTabPane>
+    </MDBTabContent>
+    <!-- Tabs content -->
+  </MDBTabs>
 
-    </div>
-</div>
 
- </div>
+
+
+  
+    
+  
+
+
+
+    
+    
+  </v-container>
+
+</v-main>
+</v-app>
 </template>
 
 
 <script>
+import { MDBInput } from 'mdb-vue-ui-kit';
+
 import emailjs from 'emailjs-com';
+import { MDBTextarea } from 'mdb-vue-ui-kit';
+import { ref } from 'vue';
+import { MDBCol, MDBRow, MDBBtn, 
+      MDBTabs,
+      MDBTabNav,
+      MDBTabContent,
+      MDBTabItem,
+      MDBTabPane } from 'mdb-vue-ui-kit';
 export default {
   name: 'ContactUs',
-  data() {
+  components: {
+      MDBInput,
+      MDBTextarea,
+      MDBCol,
+      MDBRow,
+      MDBBtn,
+      MDBTabs,
+     MDBTabNav,
+     MDBTabContent,
+     MDBTabItem,
+     MDBTabPane,
+    },
+     setup() {
+      const activeTabId1 = ref('ex1-1');
+
+      return {
+        activeTabId1,
+      };
+    },
+    data() {
     return {
       name: '',
       phone: '',
       gender:'',
       message: ''
+
     }
   },
+
   methods: {
     sendEmail(e) {
       try {
         emailjs.sendForm('service_k8s6umv', 'template_2z16xy8', e.target, 'user_rsrapxIJiaUt4Jl2mzi0V', {
           name: this.name,
           phone: this.phone,
-          gender: this.gender,
           message: this.meessage
         })
         console.log('it works!!!')
@@ -67,7 +132,6 @@ export default {
       // Reset form field
       this.name = ''
       this.phone = ''
-      this.gender = ''
       this.message
     },
   }
@@ -77,61 +141,3 @@ export default {
 
 
 
-<style>
-* {
-  box-sizing: border-box;
-}
-
-
-/* Style inputs */
-input[type=text], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-}
-
-input[type=submit] {
-  background-color: #0906F0;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  cursor: pointer;
-}
-
-input[type=submit]:hover {
-  background-color: #087A7C;
-}
-
-/* Style the container/contact section */
-.container {
-  border-radius: 5px;
-  background-color: #47E9E4;
-  padding: 18px;
-}
-
-/* Create two columns that float next to eachother */
-.column {
-  float: left;
-  width: 10%;
-  margin-top: 6px;
-  padding: 10px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column, input[type=submit] {
-    width: 100%;
-    margin-top: 0;
-  }
-}
-</style>

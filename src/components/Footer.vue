@@ -1,35 +1,24 @@
 <template>
-  <footer class="footer">
-  <nav>
-  <router-link to="/about">About</router-link>
-    <span></span>
-  <router-link to="/privacypolicy">Privacy Policy</router-link>
-</nav>
-    <p class="copyright">Copyright &copy; {{year}} </p>
-  </footer>
+  <MDBFooter :text="['center', 'lg-start']">
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      <p class="copyright">Copyright &copy; {{year}} 
+      <a class="text-dark" href="https://staforce.in/">Staforce.in</a></p>
+    </div>
+    <!-- Copyright -->
+  </MDBFooter>
 </template>
-<script>
-import { computed } from 'vue'
 
-export default {
-  setup () {
+<script>
+  import { MDBFooter } from 'mdb-vue-ui-kit';
+import { computed } from 'vue'
+  export default {
+    setup () {
     const year = computed(() => new Date().getFullYear())
     return {year}
-  }
-}
+  },
+    components: {
+      MDBFooter
+    },
+  };
 </script>
-
-<style>
-  footer{
-    background-color: #63786B;
-    background-image: url("footer-background.jpg");
-    background-clip: padding-box;
-    size: 5px 5px;
-  }
-  copyright{
-    background-color: #335EDC;
-  }
-  footer-nav{
-    background-color: #27304B;
-  }
-  </style>

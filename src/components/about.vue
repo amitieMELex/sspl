@@ -1,31 +1,50 @@
 <template>
-
-<div class="cbox">
-
-  // <h1 style="color:#B5EE1B"> Mission</h1>
-
-<p class="title" style="color:#32A4DA">we are committed to provide great service to you.</p>
-
-<h1 style="color:#6313EE">Vision</h1>
-
-</div>
+  <v-app>
+  <MDBTabs v-model="activeTabId2">
+    <!-- Tabs navs -->
+    <MDBTabNav pills fill tabsClasses="mb-3">
+      <MDBTabItem tabId="ex2-1" href="ex2-1">Link</MDBTabItem>
+      <MDBTabItem tabId="ex2-2" href="ex2-2">Very very very very long link</MDBTabItem>
+      <MDBTabItem tabId="ex2-3" href="ex2-3">Another link</MDBTabItem>
+    </MDBTabNav>
+    <!-- Tabs navs -->
+    <!-- Tabs content -->
+    <MDBTabContent>
+      <MDBTabPane tabId="ex2-1">Tab 1 content</MDBTabPane>
+      <MDBTabPane tabId="ex2-2">Tab 2 content</MDBTabPane>
+      <MDBTabPane tabId="ex2-3">Tab 3 content</MDBTabPane>
+    </MDBTabContent>
+    <!-- Tabs content -->
+  </MDBTabs>
+</v-app>
 </template>
 
 
-<style>
-html {
-  box-sizing: border-box;
-}
 
-cbox{
-  float: right;
-  width: 33.3%;
-  margin-bottom: 16px;
-  padding: 0 26px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin: 0px;
-  background-color: #08D5F1;
-  text-align:centre;
- 
-}
-</style>
+<script>
+  import {
+    MDBTabs,
+    MDBTabNav,
+    MDBTabContent,
+    MDBTabItem,
+    MDBTabPane,
+  } from 'mdb-vue-ui-kit';
+  import { ref } from 'vue';
+
+  export default {
+    components: {
+      MDBTabs,
+      MDBTabNav,
+      MDBTabContent,
+      MDBTabItem,
+      MDBTabPane,
+    },
+    setup() {
+      const activeTabId2 = ref('ex2-1');
+
+      return {
+        activeTabId2,
+      };
+    },
+  };
+</script>

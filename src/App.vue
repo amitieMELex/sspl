@@ -1,19 +1,30 @@
 <template>
+  <Navigation/> 
+  <v-app>
+ <v-main> 
+ <v-container> 
 <div>
-<Navigation/>
+
 <router-view/>
 
 <Footer/>
   </div>
+</v-container>
+</v-main>
+
+</v-app>
 </template>
 
-<script>
 
+
+
+
+
+
+<script>
 import Navigation from './components/Navigation.vue'
 import Footer from './components/Footer.vue'
 // import carousel from './components/carousel'
-
-
 export default {
   name: 'App',
   components: {
@@ -31,6 +42,5 @@ export default {
   text-align: center;
   
   margin-top: 0px;
-
 }
 </style>

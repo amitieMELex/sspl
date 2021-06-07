@@ -5,9 +5,11 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "start": "vue-cli-service serve --open"
   },
   "dependencies": {
+    "@mdi/font": "5.9.55",
     "animate.css": "^4.1.1",
     "aos": "^3.0.0-beta.6",
     "bootstrap": "^5.0.0",
@@ -15,12 +17,15 @@
     "core-js": "^3.6.5",
     "emailjs-com": "^2.6.4",
     "jquery": "^3.6.0",
+    "mdbvue": "6.7.2",
     "multiple.js": "^0.0.1",
     "popper.js": "^1.16.1",
+    "roboto-fontface": "*",
     "vue-router": "^4.0.6",
     "vue-sidebar-menu": "^5.0.0-alpha.9",
     "vue2": "^1.0.0",
-    "vuesax": "^4.0.1-alpha.25"
+    "vuesax": "^4.0.1-alpha.25",
+    "vuetify": "^3.0.0-alpha.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
@@ -29,7 +34,12 @@
     "@vue/compiler-sfc": "^3.0.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^7.0.0"
+    "eslint-plugin-vue": "^7.0.0",
+    "node-sass": "^4.9.0",
+    "sass": "~1.32.0",
+    "sass-loader": "^10.0.0",
+    "vue-cli-plugin-mdb": "~2.1.0",
+    "vue-cli-plugin-vuetify": "~2.4.1"
   },
   "eslintConfig": {
     "root": true,
