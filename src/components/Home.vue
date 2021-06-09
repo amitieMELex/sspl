@@ -15,9 +15,9 @@
 
   <v-container>
     <v-banner>
-      <h5 style="color:#E021A0; font-style:italic;font-family:Cursive,garamond,serif;">
+      <h3 style="color:#164FF3; font-style:italic;font-family:Cursive,garamond,serif;">
         Industries
-      </h5>
+      </h3>
     </v-banner>
 
   
@@ -25,9 +25,11 @@
   <MDBRow :cols="['1','md-2']" class="g-4">
     <MDBCol>
       <MDBCard>
-        <MDBCardImg src="https://mdbootstrap.com/img/new/standard/city/041.jpg" top alt="..."/>
+        <v-img src="../assets/coding.jpg" top alt="..." :aspect-ratio="16/9"
+        :width="width" max-height="650"
+  max-width="650"></v-img>
         <MDBCardBody>
-          <MDBCardTitle>Information Technology</MDBCardTitle>
+          <MDBCardTitle><MDBIcon icon="css3" iconStyle="fab" style="color: #C20B69"/>Information Technology</MDBCardTitle>
           <MDBCardText>
             This is a longer card with supporting text below as a natural lead-in to
             additional content. This content is a little bit longer.
@@ -37,9 +39,11 @@
     </MDBCol>
     <MDBCol>
       <MDBCard>
-        <MDBCardImg src="https://mdbootstrap.com/img/new/standard/city/042.jpg" top alt="..."/>
+        <v-img src="../assets/logistics.png" top alt="..." :aspect-ratio="16/9"
+        :width="width" max-height="650"
+  max-width="650"></v-img>
         <MDBCardBody>
-          <MDBCardTitle>Recruitment</MDBCardTitle>
+          <MDBCardTitle><MDBIcon icon="truck" iconStyle="fas" style="color: #0BA9C2" />Transport & Logistics</MDBCardTitle>
           <MDBCardText>
             This is a longer card with supporting text below as a natural lead-in to
             additional content. This content is a little bit longer.
@@ -49,9 +53,11 @@
     </MDBCol>
     <MDBCol>
       <MDBCard>
-        <MDBCardImg src="https://mdbootstrap.com/img/new/standard/city/043.jpg" top alt="..."/>
+        <v-img src="../assets/banking.jpg" top alt="..." :aspect-ratio="16/9"
+        :width="width" max-height="650"
+  max-width="650"></v-img>
         <MDBCardBody>
-          <MDBCardTitle>Banking</MDBCardTitle>
+          <MDBCardTitle><MDBIcon icon="bitcoin" iconStyle="fab" style="color: #07CEF5" />Banking</MDBCardTitle>
           <MDBCardText>
             This is a longer card with supporting text below as a natural lead-in to
             additional content.
@@ -61,9 +67,39 @@
     </MDBCol>
     <MDBCol>
       <MDBCard>
-        <MDBCardImg src="https://mdbootstrap.com/img/new/standard/city/044.jpg" top alt="..."/>
+        <v-img src="../assets/bsnssol.jpg" top alt="..." :aspect-ratio="16/9"
+        :width="width" max-height="650"
+  max-width="650"></v-img>
         <MDBCardBody>
-          <MDBCardTitle>Public Sectors</MDBCardTitle>
+          <MDBCardTitle><MDBIcon icon="shapes" iconStyle="fas" style="color: #E8C7ED"/>Public Sectors</MDBCardTitle>
+          <MDBCardText>
+            This is a longer card with supporting text below as a natural lead-in to
+            additional content. This content is a little bit longer.
+          </MDBCardText>
+        </MDBCardBody>
+      </MDBCard>
+    </MDBCol>
+    <MDBCol>
+      <MDBCard>
+        <v-img src="../assets/aihealthcare.png" top alt="..." :aspect-ratio="16/9"
+        :width="width" max-height="650"
+  max-width="650"></v-img>
+        <MDBCardBody>
+          <MDBCardTitle><MDBIcon icon="user-md" iconStyle="fas" style="color: #F56A32"/>Healthcare</MDBCardTitle>
+          <MDBCardText>
+            This is a longer card with supporting text below as a natural lead-in to
+            additional content. This content is a little bit longer.
+          </MDBCardText>
+        </MDBCardBody>
+      </MDBCard>
+    </MDBCol>
+    <MDBCol>
+      <MDBCard>
+        <v-img src="../assets/recruit.png" top alt="..." :aspect-ratio="16/9"
+        :width="width" max-height="650"
+  max-width="650"></v-img>
+        <MDBCardBody>
+          <MDBCardTitle><MDBIcon icon="user-tie" iconStyle="fas" style="color: #6CEE52"/>Human Resource</MDBCardTitle>
           <MDBCardText>
             This is a longer card with supporting text below as a natural lead-in to
             additional content. This content is a little bit longer.
@@ -72,40 +108,86 @@
       </MDBCard>
     </MDBCol>
   </MDBRow>
+</v-container>
+ 
 
-  </v-container>
+  <v-banner>
+<h5 style="color: #F11032">Review and stars given by our client
+<MDBIcon icon="star" iconStyle="fas" />
+<MDBIcon icon="star" iconStyle="fas" />
+<MDBIcon icon="star" iconStyle="fas" />
+<MDBIcon icon="star" iconStyle="fas" />
+<MDBIcon icon="star" iconStyle="fas" />
+</h5></v-banner>
 
-<div >
-<h1 style="color: #F11032">Review and stars given by our client</h1>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star"></span>
-</div>
-  
-  <div >
-  <v-img src="../assets/randm.jpg" alt="Avatar" style="width:90px"></v-img>
-  <p style="color: #10F1E0"><span>Sameer Jha.</span> CEO at Wood Heights.</p>
-  <p style="color: #10F147">"There recruitment team is excellent."</p>
-  <span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-</div>
 
-<div >
-  <v-img src="../assets/sanjana.jpg" alt="Avatar" style="width:90px"></v-img>
-  <p style="color: #10F1E0"><span >Sanjana Puri.</span> CEO at AB Media.</p>
-  <p style="color: #10F147">"They really listen to what you need."</p>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star "></span>
-</div>
 
+
+
+
+ <MDBCard class="mb-3" style="max-width: 100%; align-items: center;">
+    <MDBRow class="g-0">
+      <MDBCol md="4">
+       
+ <v-img src="../assets/randm.jpg" alt="Avatar" max-height="70"
+  max-width="70"></v-img>
+
+
+
+      </MDBCol>
+      <MDBCol md="8" >
+        <MDBCardBody >
+          <MDBCardTitle>
+            <p style="color: #050008"><span>Sameer Jha.</span> CEO at Wood Heights.</p>
+          </MDBCardTitle>
+          <MDBCardText>
+            <p style="color: #CE9AEC">"There recruitment team is excellent."</p>
+          </MDBCardText>
+          <MDBCardText>
+            <small class="text-muted">
+               
+<MDBIcon icon="star" iconStyle="fas" style="color: #F11032"/>
+<MDBIcon icon="star" iconStyle="fas" style="color: #F11032" />
+<MDBIcon icon="star" iconStyle="fas" style="color: #F11032" />
+<MDBIcon icon="star" iconStyle="fas" style="color: #F11032"/>
+<MDBIcon icon="star" iconStyle="fas" style="color: #F11032"/>
+
+            </small>
+          </MDBCardText>
+        </MDBCardBody>
+      </MDBCol>
+    </MDBRow>
+  </MDBCard>
+
+
+  <MDBCard class="mb-3" style="max-width:100%; align-items: center;">
+    <MDBRow class="g-0">
+      <MDBCol md="4">
+      <v-img src="../assets/sanjana.jpg" alt="Avatar" max-height="70"
+  max-width="70"></v-img>
+      </MDBCol>
+      <MDBCol md="8">
+        <MDBCardBody>
+          <MDBCardTitle>
+            <p style="color: #050008"><span >Sanjana Puri.</span> CEO at AB Media.</p>
+          </MDBCardTitle>
+          <MDBCardText>
+            <p style="color: #CE9AEC">"They really listen to what you need."</p>
+          </MDBCardText>
+          <MDBCardText>
+            <small class="text-muted">
+             <MDBIcon icon="star" iconStyle="fas" style="color: #F11032"/>
+             <MDBIcon icon="star" iconStyle="fas" style="color: #F11032"/>
+             <MDBIcon icon="star" iconStyle="fas" style="color: #F11032"/>
+             <MDBIcon icon="star" iconStyle="fas" style="color: #F11032"/>
+             <MDBIcon icon="star" iconStyle="fas" style="color: #F11032"/>
+             <MDBIcon icon="star" iconStyle="far" style="color: #F11032"/>
+            </small>
+          </MDBCardText>
+        </MDBCardBody>
+      </MDBCol>
+    </MDBRow>
+  </MDBCard>
   </v-app>
  </template>
 
@@ -115,7 +197,7 @@
 <script>
 	
 import carousel from '@/components/carousel.vue'
-import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBCol, MDBRow, MDBCardImg } from "mdb-vue-ui-kit";
+import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBCol, MDBRow, MDBIcon  } from "mdb-vue-ui-kit";
 export default {
   name: 'Home',
   components: {
@@ -124,11 +206,11 @@ export default {
       MDBCardBody,
       MDBCardTitle,
       MDBCardText,
-      
+      MDBIcon,
       MDBCol,
       MDBRow,
       
-      MDBCardImg
+      
      
   }
 }

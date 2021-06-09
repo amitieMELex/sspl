@@ -13,6 +13,7 @@
        
       <MDBNavbarItem to="/about"> About </MDBNavbarItem>
       <MDBNavbarItem to="/services"> Services </MDBNavbarItem>
+      <MDBNavbarItem to="/research"> Research </MDBNavbarItem>
       <MDBNavbarItem to="/contact"> Contact </MDBNavbarItem>
        
     </MDBNavbarNav>

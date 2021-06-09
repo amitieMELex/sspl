@@ -10,9 +10,9 @@
   <MDBTabs v-model="activeTabId1">
     <!-- Tabs navs -->
     <MDBTabNav pills tabsClasses="mb-3">
-      <MDBTabItem tabId="ex1-1" href="ex1-1">Tab #1</MDBTabItem>
-      <MDBTabItem tabId="ex1-2" href="ex1-2">Tab #2</MDBTabItem>
-      <MDBTabItem tabId="ex1-3" href="ex1-3">Tab #3</MDBTabItem>
+      <MDBTabItem tabId="ex1-1" href="ex1-1">Address</MDBTabItem>
+      <MDBTabItem tabId="ex1-2" href="ex1-2">Contact</MDBTabItem>
+      <!-- <MDBTabItem tabId="ex1-3" href="ex1-3">Tab #3</MDBTabItem> -->
     </MDBTabNav>
     <!-- Tabs navs -->
     <!-- Tabs content -->
@@ -51,7 +51,7 @@
        </MDBBtn> 
       </form>
       </MDBTabPane>
-      <MDBTabPane tabId="ex1-3">Content #3</MDBTabPane>
+      <!-- <MDBTabPane tabId="ex1-3">Content #3</MDBTabPane> -->
     </MDBTabContent>
     <!-- Tabs content -->
   </MDBTabs>

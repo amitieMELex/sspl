@@ -1,7 +1,7 @@
 <template>
   <v-app>
   <MDBCarousel
-    v-model="carouse"
+    v-model="carousel"
     :items="items"
     :controls="false"
     fade
@@ -39,11 +39,11 @@
             "Our staffing service is fully automated, from payroll to performance."
         }
       ];
-      const carouse = ref(0);
+      const carousel = ref(0);
 
       return {
         items,
-        carouse
+        carousel
       };
     }
   };

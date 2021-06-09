@@ -4,8 +4,9 @@ import contact from '@/components/contact.vue'
 import about from '@/components/about.vue'
 import services from '@/components/services.vue'
 import privacy from '@/components/privacy.vue'
-import carousel from '@/components/carousel.vue'
+
 import energyindustry from '@/components/energyindustry.vue'
+import research from '@/components/research.vue'
 
 
 const routes = [
@@ -40,9 +41,9 @@ const routes = [
         component:energyindustry
     },
     {
-        path: '/slide',
-        name: 'slide',
-        component: carousel,
+        path: '/research',
+        name: 'research',
+        component: research,
     }
 
 
