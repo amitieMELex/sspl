@@ -23,7 +23,6 @@
           <MDBCardTitle>Staforce</MDBCardTitle>
           <MDBCardText>
            <h>Staforce was founded to make everyone digitally connected, empower them with our technology.</h>
-             <h>Staforce was founded to make everyone digitally connected, empower them with our technology.</h>
         <h>
         We have built many Platforms for this purpose and will bring more!
         </h>

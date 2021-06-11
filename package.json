@@ -1,12 +1,13 @@
 {
-  "name": "sspl",
+  "name": "staforce",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "start": "vue-cli-service serve --open"
+    "start": "vue-cli-service serve --open",
+    "deploy": "aws --profile staforce-vue --region us-west-1 s3 sync ./dist s3://staforce.in --delete"
   },
   "dependencies": {
     "@mdi/font": "5.9.55",

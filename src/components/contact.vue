@@ -19,17 +19,19 @@
     <MDBTabContent>
       <MDBTabPane tabId="ex1-1">
           <MDBRow style="color: #985DF1;background-color: #F1E5E7;">
-    <MDBCol col="9"> <h1>Address</h1></MDBCol>
+    <MDBCol col="9"> <h5>Address</h5></MDBCol>
     <MDBCol col="4">
-      <p>Plot no 430/42</p><br />
+      <p>Plot no 430/42</p>
       <p>Laxmi Vihar, Burari</p>
-      <br /><p>Delhi</p>
+      <p>Delhi</p>
     </MDBCol>
     <MDBCol col="6">
-      <h2><i class="fas fa-envelope-open"></i></h2>
-      <br /><p>support@staforce.in</p>
-      <h2><i class="fas fa-phone"></i></h2>
-      <br /><p>9953850970</p>
+      <i class="fas fa-envelope-open"></i><br />
+      support@staforce.in<br />
+      <i class="fas fa-phone"></i><br />
+      <p>9953850970</p>
+      <p>8851332606</p>
+      <p>8102256500</p>
     </MDBCol>
   </MDBRow>
       </MDBTabPane>
